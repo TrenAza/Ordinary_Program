@@ -1,13 +1,16 @@
 #Attendence Calculator
 
-def attendence(classes,leaves):
-    if leaves <= 0:
+def attendence(classes,present):
+    if present<= 0:
         print('Attend some classes dumb nigga')
-    if leaves > classes:
+    if present > classes:
         print('Bruh the hell')
-    
-    percentage = (leaves/classes)*100
+    percentage = (present/classes)*100
     return(percentage)
-classes = int(input('Total Number of Classes This Year'))
-leaves = int(input('Total Number of Leaves Taken This Year'))
-Total_percent = attendence(classes,leaves)
+classes = int(input('Total Number of Classes This Year:'))
+print()
+present = int(input('Total Number of Classes Attended This Year:'))
+print()
+Total_percent = attendence(classes,present)
+
+print('PERCENTAGE OF CLASSES ATTENDED',Total_percent,'%')
